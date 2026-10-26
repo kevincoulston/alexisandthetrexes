@@ -1,0 +1,17 @@
+{
+  "name": "alexisandthetrexes",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-09",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "html_handling": "force-trailing-slash",
+    "run_worker_first": true
+  },
+  "routes": [
+    { "pattern": "alexisandthetrexes.com", "custom_domain": true },
+    { "pattern": "www.alexisandthetrexes.com", "custom_domain": true }
+  ],
+  "workers_dev": true
+}

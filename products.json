@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Alexis and the T-Rexes: Count to Ten",
+    "url": "https://alexisandthetrexes.com/books/count-to-ten/",
+    "image": "https://alexisandthetrexes.com/assets/img/cover-count-to-ten.webp",
+    "amazon": "https://www.amazon.com/dp/1660378885"
+  },
+  {
+    "title": "Alexis and the T-Rexes: Birthday Surprise",
+    "url": "https://alexisandthetrexes.com/books/birthday-surprise/",
+    "image": "https://alexisandthetrexes.com/assets/img/cover-birthday-surprise.webp",
+    "amazon": "https://www.amazon.com/dp/B084DP5DGW"
+  },
+  {
+    "title": "Alexis and the T-Rexes: Hide and Seek",
+    "url": "https://alexisandthetrexes.com/books/hide-and-seek/",
+    "image": "https://alexisandthetrexes.com/assets/img/cover-hide-and-seek.webp",
+    "amazon": "https://www.amazon.com/dp/B0884K4ZRH"
+  },
+  {
+    "title": "How to Draw: Cartoon Dinosaurs",
+    "url": "https://firstartbooks.com/product/how-to-draw-cartoon-dinosaurs/",
+    "image": "https://alexisandthetrexes.com/assets/img/cover-htd-dinos.webp",
+    "amazon": "https://www.amazon.com/dp/B0BW2SDFT6"
+  },
+  {
+    "title": "Trace Then Color: Cartoon Dinosaurs",
+    "url": "https://firstartbooks.com/product/trace-then-color-cartoon-dinosaurs/",
+    "image": "https://alexisandthetrexes.com/assets/img/cover-ttc-dinos.webp",
+    "amazon": "https://www.amazon.com/dp/B0BW2RY5ZM"
+  },
+  {
+    "title": "Draw by Grid: Cartoon Dinosaurs",
+    "url": "https://firstartbooks.com/product/draw-by-grid-cartoon-dinosaurs/",
+    "image": "https://alexisandthetrexes.com/assets/img/cover-dbg-dinos.webp",
+    "amazon": "https://www.amazon.com/dp/B0CFZR7QL2"
+  }
+]

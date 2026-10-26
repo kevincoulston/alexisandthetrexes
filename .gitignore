@@ -1,0 +1,13 @@
+
+# Local state and secrets
+node_modules/
+.wrangler/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+.DS_Store
+
+# IndexNow page hashes (per computer)
+.indexnow-state.json
