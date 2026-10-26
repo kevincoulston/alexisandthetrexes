@@ -6,7 +6,7 @@ Shared source for ChatGPT/Codex and Claude. Read [AGENTS.md](AGENTS.md) and [DEP
 
 ## Layout
 
-- `site_data.py`: all book facts (from the Amazon listings, Oct 26 2026), characters, free pages and the GA4 ID (`GA_ID`, empty until a property exists; no analytics tag is written while it is empty).
+- `site_data.py`: all book facts (from the Amazon listings, Oct 26 2026), characters, free pages and the GA4 ID (`GA_ID`, G-FEWWZYTBCV, loaded on first interaction or after 4 s; no tag is written when it is empty).
 - `build.py`: writes `dist/` from `site_data.py`, `src/style.css`, `src/site.js` and `art/` (WebP srcset variants, inline CSS, self-hosted Chewy and Lexend with size-matched fallbacks, JSON-LD, sitemap, robots, headers).
 - `seo_enrich.py`: the network's shared structured data, alt text and image sitemap pass (uses `products.json` and `book-isbns.csv`). Also writes the IndexNow key file.
 - `src/worker.js`: serves `dist/`, redirects www to the bare domain, and marks the temporary workers.dev address noindex.

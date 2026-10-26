@@ -232,12 +232,12 @@ def gang_section():
 
 
 def count_section():
-    dinos = [("snap.webp", 160), ("daisy.webp", 160), ("snap-sleepy.webp", 160), ("daisy-five.webp", 120), ("snap-artist.webp", 160)]
+    dinos = [("snap.webp", 160), ("daisy.webp", 160)]
     data = []
     for n, w in dinos:
         vs, W, Hh = variants(n)
         data.append({"src": small_url(n, w), "w": w, "h": round(Hh * w / W)})
-    start = [(6, 44, 0), (44, 46, 1), (82, 44, 4), (20, 14, 2), (60, 12, 1)]
+    start = [(6, 44, 0), (44, 46, 1), (82, 44, 0), (20, 14, 1), (60, 12, 0)]
     first = "".join(f'<img class="ar-d" src="{data[k]["src"]}" width="{data[k]["w"]}" height="{data[k]["h"]}" alt="" aria-hidden="true" '
                     f'style="left:{x}%;bottom:{y}%" loading="lazy">' for x, y, k in start)
     nums = "".join(f'<button class="ar-num" type="button">{i}</button>' for i in range(1, 11))
@@ -306,7 +306,7 @@ def home():
             f'{img("daisy.webp", "Daisy, the blue baby T-Rex with a red bow, giggling", "(max-width:599px) 32vw, (max-width:1179px) 22vw, 260px", "ar-c ar-c-daisy", lazy=False)}</div>'
             f'<div class="ar-badge">{stars(120)}<b>5.0 stars<br>on Amazon</b><small>all 3 books</small></div></div></div>'
             f'<div class="ar-hero-under"><div class="ar-card ar-hero-card"><p class="ar-kick">Picture books for ages 3 to 8</p>'
-            f'<h1>A five-year-old, two baby T-Rexes, and a whole lot of giggles</h1>'
+            f'<h1>A five-year-old, two baby <span class="ar-nw">T-Rexes</span>, and a whole lot of giggles</h1>'
             f'<p>Count to ten, throw a birthday party and play hide-and-seek with Alexis and her silly dinosaur friends, Snap and Daisy.</p>'
             f'<div class="ar-rating">{stars(90, "#f7941d")}5.0 on Amazon, all 3 books</div>'
             f'<div class="ar-btns"><a class="ar-btn" href="#books">Meet the books</a><a class="ar-btn alt" href="#play">Play along</a></div></div></div></section>')

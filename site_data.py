@@ -5,7 +5,7 @@ Kevin's rules: Snap is the orange boy T-Rex, Daisy is the blue girl T-Rex. Never
 """
 
 SITE = "https://alexisandthetrexes.com"
-GA_ID = ""  # GA4 measurement ID (G-...). Empty until Kevin creates the property; no analytics tag is written while empty.
+GA_ID = "G-FEWWZYTBCV"  # GA4 measurement ID, loaded on first interaction or after 4 s (Kevin, Oct 26 2026)
 SERIES_URL = "https://www.amazon.com/dp/B08YWDNZ4D"
 AUTHOR_STORE = "https://www.amazon.com/stores/author/B00JC406ZE"
 
