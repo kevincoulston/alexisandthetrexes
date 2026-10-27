@@ -309,7 +309,7 @@ def home():
             f'<h1>A five-year-old, two baby <span class="ar-nw">T-Rexes</span>, and a whole lot of giggles</h1>'
             f'<p>Count to ten, throw a birthday party and play hide-and-seek with Alexis and her silly dinosaur friends, Snap and Daisy.</p>'
             f'<div class="ar-rating">{stars(90, "#f7941d")}5.0 on Amazon, all 3 books</div>'
-            f'<div class="ar-btns"><a class="ar-btn" href="#books">Meet the books</a><a class="ar-btn alt" href="#play">Play along</a></div></div></div></section>')
+            f'<div class="ar-btns"><a class="ar-btn" href="#books">View the books</a><a class="ar-btn alt" href="#play">Play along</a></div></div></div></section>')
     body = hero + books_section() + gang_section() + count_section() + free_section() + draw_section() + tips_section() + kevin_section()
     ld = site_nodes() + [webpage("/", "Alexis and the T-Rexes picture books")] + [book_node(b) for b in BOOKS]
     preload = (f'<link rel="preload" as="image" href="{small_url("hero-phone.webp", 640)}" imagesrcset="{ss(phone)}" imagesizes="100vw" media="(max-width:599px)">'
