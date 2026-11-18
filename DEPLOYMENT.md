@@ -10,6 +10,7 @@ python3 build.py && python3 seo_enrich.py
 
 git pull
 npx.cmd wrangler deploy --config wrangler.jsonc
-node indexnow.mjs
+
+IndexNow is optional. If you run `node indexnow.mjs` after a deploy, it sends only new and updated pages, never the whole site (see README, IndexNow).
 
 Account credentials are deliberately absent; use an authenticated Wrangler login. Never claim a commit is live without a successful deployment result.

@@ -10,7 +10,7 @@ Shared source for ChatGPT/Codex and Claude. Read [AGENTS.md](AGENTS.md) and [DEP
 - `build.py`: writes `dist/` from `site_data.py`, `src/style.css`, `src/site.js` and `art/` (WebP srcset variants, inline CSS, self-hosted Chewy and Lexend with size-matched fallbacks, JSON-LD, sitemap, robots, headers).
 - `seo_enrich.py`: the network's shared structured data, alt text and image sitemap pass (uses `products.json` and `book-isbns.csv`). Also writes the IndexNow key file.
 - `src/worker.js`: serves `dist/`, redirects www to the bare domain, and marks the temporary workers.dev address noindex.
-- `indexnow.mjs`: tells Bing which pages changed after a deploy.
+- `indexnow.mjs`: tells Bing about new and updated pages only (optional, after a deploy).
 
 Build: `python3 build.py && python3 seo_enrich.py` (needs Pillow). Commit `dist/` with the source.
 
@@ -20,4 +20,4 @@ Build: `python3 build.py && python3 seo_enrich.py` (needs Pillow). Commit `dist/
 
 ## IndexNow (Bing)
 
-After each deploy, run `node indexnow.mjs` from this folder (Node 18 or newer). It checks that `/196f6339d9e200ab10aef9905222f351.txt` is live and sends the pages whose HTML changed since its last run on that computer. `--all` resends every page, `--dry-run` sends nothing. Page hashes are kept in `.indexnow-state.json`, which Git ignores.
+Optional, after a deploy: run `node indexnow.mjs` from this folder (Node 18 or newer). It sends IndexNow (Bing and the other IndexNow search engines) only NEW pages and pages whose own content changed since its last run on that computer, never the whole site. It compares each page's title, description, canonical and the text and images inside `<main>`; menu, footer, scripts and Cloudflare tokens are ignored, so a site-wide template edit does not mark every page as updated. If more than 50 pages look updated at once it treats that as a template change and does not send them (new pages still go). The first run on a computer sends nothing and only records the pages. Pages marked noindex are never sent. `--dry-run` lists what would be sent; `--yes` sends a big batch on purpose. There is no `--all`. Page fingerprints are kept in `.indexnow-state.json`, which Git ignores.
